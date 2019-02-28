@@ -3,22 +3,21 @@ import time
 import requests
 import hashlib
 
-api_address = 'https://exchange-open-api.coineal.com/open/api'
 
 class coinealApiConnection(object):
 
-    def __init__(self, Key, secret, mobile, password):
+    def __init__(self, Key, secret, mobile, password, country = "55"):
         self.Key = Key
         self.secret = secret.encode('utf-8')
         self.mobile = mobile
         self.nonce = 0
-        self.country = "55";
+        self.country = country;
         self.password = password;
         self.time = self._get_timestamp()
         self.api_address = "https://exchange-open-api.coineal.com/open/api"
 
     def make_request(self, verb, url, body_dict):
-        url = api_address + url
+        url = self.api_address + url
         self.time = self._get_timestamp()
 
         if len(body_dict):
