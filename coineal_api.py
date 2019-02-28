@@ -2,19 +2,11 @@ import json
 import time
 import requests
 import hashlib
-try:
-    #python3 compatibility
-    import urllib.parse as urlparse
-except ImportError:
-    import urllib as urlparse
-
-
 
 api_address = 'https://exchange-open-api.coineal.com/open/api'
 
 class coinealApiConnection(object):
 
-    #clientKey, secret, and userId are provided by itBit and are specific to your user account
     def __init__(self, Key, secret, mobile, password):
         self.Key = Key
         self.secret = secret.encode('utf-8')
