@@ -1,7 +1,7 @@
 from coineal_api import coinealApiConnection
 import json
 
-coin = coinealApiConnection(Key = "", secret= "", mobile="", password="", country = "55")
+coin = coinealApiConnection(Key = "c04ca9e9fd0c82f7c3fd5d2a6f9a0277", secret= "51f87bca9d85145eea3b4febe0b6d51e", mobile="", password="", country = "55")
 symbol = "vssusdt"
 
 print("Buscando o ticker das ultimas 24h do '{}'...".format(symbol))
