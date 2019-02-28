@@ -14,7 +14,7 @@ print("Obtendo o preço de transação mais recente de cada moeda...")
 print("{}\n".format(json.dumps(coin.get_latest_transaction().json(), indent = 2)))
 
 print("Criando ordem...")
-print("{}\n".format(json.dumps(coin.create_order(side="SELL", type=1, price=1, volume=1, symbol="vssusdt").json(), indent = 2)))
+print("{}\n".format(json.dumps(coin.create_order(side="SELL", type=1, price=1, volume=1, symbol="{}".format(symbol)).json(), indent = 2)))
 
 print("Cancelando Ordem")
-print("{}\n".format(json.dumps(coin.cancel_order(order_id="34343", symbol="vssusdt").json(), indent = 2)))
+print("{}\n".format(json.dumps(coin.cancel_order(order_id="34343", symbol="{}".format(symbol)).json(), indent = 2)))
